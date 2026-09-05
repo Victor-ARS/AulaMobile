@@ -1,15 +1,18 @@
 import { StyleSheet, Text } from "react-native"
 
-const MyLabel = ( props ) =>{
-
+//const MyLabel = ( props ) =>{
+const MyLabel = ( {titulo, tamanho, cor} ) =>{
+    console.log("MyLabel :: ",props)
+    //const {titulo, tamanho, cor} = props
+    console.log(titulo)
+ 
     return(
         <Text style={
             {
-                fontSize: props.tamanho,
-                color: props.cor
-
+                fontSize: tamanho,
+                color: cor? cor : "#00ff00"
             }} > 
-            { props.titulo } 
+            { titulo } 
         </Text>
     )
 }
